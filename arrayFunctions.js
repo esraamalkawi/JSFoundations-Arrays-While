@@ -9,13 +9,11 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(numbers) {
-  if (numbers.lenghth%2 !== 0) 
-    return true
-    else return false
+  if(numbers.length % 2 === 1) return true
+    else 
+    return false
   }
   // Your code here
-isArrayLengthOdd([1, 2, 3])
-isArrayLengthOdd([1, 2, 3,4])
 
 /**
  * isArrayLengthEven(numbers):
@@ -28,14 +26,9 @@ isArrayLengthOdd([1, 2, 3,4])
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
 function isArrayLengthEven(numbers) {
-  if (numbers.lenghth%2 === 0) 
-    return false
-    else
-    return true
+  return !isArrayLengthOdd(numbers)
   // Your code here
 }
-isArrayLengthEven([1, 2, 3])
-isArrayLengthEven([1, 2, 3,4])
 /**
  * addLailaToArray(instructors):
  * - receives array `instructors`
@@ -101,10 +94,12 @@ secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"])
  * - Use string method .endsWith()
  */
 function youGottaCalmDown(shout) {
- while (shout.slice(0,-1).endsWith("!")){
-   shout=shout.slice(0,-1)
- }
- return shout;
+ //while (shout.slice(0,-1).endsWith("!")){
+   //shout=shout.slice(0,-1)}
+while (shout.endsWith("!!")){
+  shout= shout.slice(0,-1)
+}
+   return shout;
   // Your code here
 }
 youGottaCalmDown("HI!!!!!!!!!!")
